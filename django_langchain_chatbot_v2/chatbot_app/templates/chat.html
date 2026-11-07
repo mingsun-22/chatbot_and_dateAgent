@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>智能客服演示</title>
+  <style>
+    /* 页面整体字体和边距设置 */
+    body { font-family: Arial, sans-serif; margin: 20px }
+
+    /* 聊天框：固定宽度、高度，带滚动条和边框 */
+    #chatbox{
+      width: 700px;               /* 聊天框宽度 */
+      border: 1px solid #ddd;     /* 浅灰色边框 */
+      padding: 10px;              /* 内边距 */
+      height: 400px;              /* 固定高度 */
+      overflow:auto               /* 超出部分显示滚动条 */
+    }
+
+    /* 用户消息对齐方式和字体颜色 */
+    .user{
+      text-align: right;          /* 靠右显示 */
+      color: #111                 /* 深色文字 */
+    }
+
+    /* 机器人消息对齐方式和字体颜色 */
+    .bot{
+      text-align: left;           /* 靠左显示 */
+      color: #333                 /* 稍浅的深色文字 */
+    }
+
+    /* 输入框宽度 */
+    #input{
+      width: 600px
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>智能客服（本地测试）- 支持多轮对话</h2>
+    <a href="/sessions/" style="color: #2196F3; text-decoration: none;">📋 查看会话历史</a>
+  </div>
+  <div id="chatbox"></div>
+  <div style="margin-top:10px;">
+    <input id="input" placeholder="请输入...(可发送联系方式如: 手机:13800138000 或 微信:wxid_xxx)">
+    <button id="send">发送</button>
+    <button id="clear" onclick="clearChat()" style="margin-left:10px;">清空对话</button>
+  </div>
+
+<script src="/static/chatbot_app.js"></script>
+</body>
+</html>
